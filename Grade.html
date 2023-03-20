@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="speed detector.html">speed</a>
+    <a href="Net salary.html">Net</a>
+    <title>Student Grade </title>
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css"> 
+</head>
+<body>
+    <input id="marksGrade"/>
+    <button onclick="Convert()">Grade</button>
+    <h3 id="gradeDisplay"></h3>
+    <h1>Insert marks up here</h1>
+    <script>
+     const marksGrade=document.getElementById(
+            'marksGrade'
+        );
+        const gradeDisplay=document.getElementById(
+            'gradeDisplay'
+        )
+        
+       function Convert(){
+        const marks=parseInt(marksGrade.value);
+        let grade;
+        if( marks >79){
+            grade='A';
+        }
+        else if(marks>=60 ){
+            grade='B';
+        }
+        else if (marks>=50){
+            grade='C';
+        }
+        else if(marks>=40) {
+             grade='D';
+        }
+        else if (marks <40 && marks>=0 ){ //this is supossed to give you marks that are not below 0
+            grade='E';
+      }
+    console.log(grade)
+    gradeDisplay.innerText=`This is what you got !! :  ${grade}`;  
+}                 
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="index.html">grade</a>
+    <a href="Net salary.html">Net</a>
+    <title>Speed Detector</title>
+</head>
+<body>
+    <form>
+		<label for="speed"> Car Speed (km/hr): </label>
+		<input type="number" id="speed" name="speed" required>
+		<button type="submit">current Situation</button>
+	</form>
+	<p id="result"></p>
+    <script>
+  document.querySelector('form').addEventListener('submit', function(e) {
+			e.preventDefault(); // Submission Form 
+
+			
+			let carSpeed = parseInt(document.getElementById('speed').value); //this checks the speed
+
+			
+			let Points = 0;
+			if (carSpeed <= 70) {
+				document.getElementById('result').textContent = "Ok";
+			} else {
+				Points = Math.floor((carSpeed - 70) / 5);
+				if (Points > 12) {
+					document.getElementById('result').textContent = "License suspended";
+				} else {
+					document.getElementById('result').textContent = "This is your current point, " + Points;
+				}
+			}
+		});
+     
+    </script>
+</body>
+<a href="speed detector.js"></a>
+</html>

@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Sono', sans-serif
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #C9D9E8;
+    color: #fff;
+}    
